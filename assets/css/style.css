@@ -988,3 +988,151 @@ button {
         left: -5px;
     }
 }
+
+/* ===================================
+   HALAMAN FITUR SEKOLAHKU
+=================================== */
+
+.page-container {
+    width: min(1120px, 92%);
+    margin: 60px auto;
+    min-height: 55vh;
+}
+
+.page-heading {
+    margin-bottom: 32px;
+    max-width: 760px;
+}
+
+.page-heading h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 12px 0;
+    color: #101b35;
+}
+
+.page-heading p,
+.note {
+    color: #667085;
+    line-height: 1.8;
+}
+
+.comparison-panel,
+.recommendation-panel,
+.favorites-panel {
+    background: #fff;
+    padding: 28px;
+    border: 1px solid #e5eaf2;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(16, 35, 70, 0.06);
+}
+
+.comparison-selectors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.comparison-selectors label,
+.recommendation-panel label,
+.favorites-panel label {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #26344d;
+}
+
+.comparison-selectors select,
+.recommendation-panel select,
+.favorites-panel select,
+.favorites-panel input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #d6deea;
+    border-radius: 10px;
+    background: #fff;
+    color: #17233c;
+    font: inherit;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e8edf5;
+    min-width: 140px;
+}
+
+.comparison-table th {
+    background: #10264a;
+    color: #fff;
+}
+
+.comparison-table th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.comparison-table th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.recommendation-panel form,
+.favorites-panel form {
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.recommendation-panel .btn-primary,
+.favorites-panel .btn-primary {
+    border: 0;
+    cursor: pointer;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font: inherit;
+}
+
+#hasilRekomendasi,
+#daftarFavorit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .page-container {
+        margin: 36px auto;
+    }
+
+    .comparison-panel,
+    .recommendation-panel,
+    .favorites-panel {
+        padding: 18px;
+    }
+
+    .comparison-selectors {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px;
+    }
+}
